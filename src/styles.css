@@ -1,0 +1,31 @@
+body{
+  margin: 0;
+  background: #FFFFFF;
+  font-family: 'Josefin Slab', serif;
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: all 1s ease;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

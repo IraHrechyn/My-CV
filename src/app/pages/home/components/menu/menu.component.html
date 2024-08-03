@@ -1,0 +1,28 @@
+<!-- Main Menu Container -->
+<div class="menu">
+  <!-- Logo Image -->
+  <img class="photo-logo" src="assets/logo.png" alt="logo" />
+
+  <!-- Hamburger Menu Section -->
+  <div class="hamburger-menu">
+    <!-- Toggle Checkbox for Menu -->
+    <input id="menu__toggle" type="checkbox" />
+
+    <!-- Label for Toggle Checkbox -->
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <!-- Menu Items -->
+    <ul class="menu__box">
+      <!-- Butterfly SVG Logo -->
+      <img class="butterfly-for-menu" src="assets/butterfly-on-menu2.svg" alt="SVG logo" />
+
+      <!-- Menu Links -->
+      <li><a class="menu__item" href="#home" (click)="closeMenu()">HOME</a></li>
+      <li><a class="menu__item" href="#about-me" (click)="closeMenu()">ABOUT ME</a></li>
+      <li><a class="menu__item" href="#projects" (click)="closeMenu()">PROJECTS</a></li>
+      <li><a class="menu__item" href="#contact" (click)="closeMenu()">CONTACT</a></li>
+    </ul>
+  </div>
+</div>

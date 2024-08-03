@@ -1,0 +1,112 @@
+/* Style for the top section */
+.top {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 20vh;
+}
+
+/* Container for images and elements in the top section */
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Styles for the triangle image and butterfly group */
+.triangle-on-top,
+.butterfly-group {
+  position: absolute;
+  width: 100%;
+}
+
+/* Triangle image specific styles */
+.triangle-on-top {
+  z-index: 3;
+  height: 20vh;
+}
+
+/* Reverse the triangle image horizontally */
+.reverse {
+  transform: scaleX(-1);
+}
+
+/* Butterfly group specific styles */
+.butterfly-group {
+  z-index: 2;
+  background-image: url('../../../assets/butterfly.png');
+  background-repeat: repeat;
+  background-size: 50px 50px;
+  opacity: 12%;
+  height: 18vh;
+}
+
+/* Style for the title container */
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 135px;
+  margin-top: -1px;
+  width: 100%;
+}
+
+/* Background color and text color for sections with 'black' class */
+.black {
+  background: #2f2f2f;
+  color: #CBCBCB;
+}
+
+/* Style for the title text */
+.title {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 30px;
+}
+
+/* Decorative lines before and after the title text */
+.black .title::before,
+.black .title::after {
+  border-bottom: 4px solid #CBCBCB;
+}
+
+/* Initial styles for the decorative lines */
+.title::before,
+.title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  border-bottom: 4px solid #2f2f2f;
+  width: 10%;
+  transition: width 2s ease;
+  transform: translateY(-50%);
+}
+
+/* Positioning the decorative lines relative to the title */
+.title::before {
+  right: calc(100% + 10px);
+}
+
+.title::after {
+  left: calc(100% + 10px);
+}
+
+/* Animation effect for the decorative lines */
+.title.animate-lines::before,
+.title.animate-lines::after {
+  width: 150px;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 450px) {
+  .title::before,
+  .title::after {
+    width: 0;
+  }
+
+  .title.animate-lines::before,
+  .title.animate-lines::after {
+    width: 30%;
+  }
+}

@@ -1,0 +1,140 @@
+/* Header Container Styles */
+.header-container {
+  display: flex;
+  position: relative;
+  height: 90vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12%;
+  box-sizing: border-box;
+  animation: text 3s;
+  scroll-behavior: smooth;
+}
+
+/* Header Text Styles */
+.header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title Styles */
+.text-title {
+  font-size: 70px;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 0.73);
+  margin: 0;
+  animation: slideFromInLeft 2s ease-in-out forwards;
+}
+
+/* Subtitle Styles */
+.text {
+  font-size: 30px;
+  animation: slideFromInLeft 2s ease-in-out forwards;
+}
+
+/* Slide-in Animation */
+@keyframes slideFromInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Profile Photo Container Styles */
+.my-photo-container {
+  width: 320px;
+  height: auto;
+}
+
+/* Profile Photo Styles */
+.my-photo {
+  width: 320px;
+  height: auto;
+  display: block;
+}
+
+/* Communication Links Container */
+.communication {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+  animation: slideInFromLeft 2s ease-in-out forwards;
+}
+
+/* Communication Logo Styles */
+.logo-communication {
+  height: 40px;
+  width: 40px;
+  transition: transform 0.3s;
+}
+
+/* Logo Hover Effect */
+.logo-communication:hover {
+  transform: scale(1.2);
+}
+
+/* Text Animation */
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column-reverse;
+    height: auto;
+    padding: 5%;
+  }
+
+  .header-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .text-title {
+    font-size: 50px;
+  }
+
+  .text {
+    font-size: 24px;
+  }
+
+  .communication {
+    justify-content: center;
+  }
+
+  .my-photo {
+    margin-top: 20px;
+    height: 330px;
+    width: auto;
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .text-title {
+    font-size: 40px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  .logo-communication {
+    height: 30px;
+    width: 30px;
+  }
+}

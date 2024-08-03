@@ -1,0 +1,181 @@
+/*---MENU---*/
+.menu {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 22222;
+  overflow: hidden;
+}
+
+/*---LOGO---*/
+.photo-logo {
+  height: auto;
+  top: 3px;
+  width: 50px;
+}
+
+/*---BURGER-MENU---*/
+.hamburger-menu {
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  right: 0;
+}
+
+/* Hide checkbox */
+#menu__toggle {
+  opacity: 0;
+}
+
+/* Hamburger button styling */
+.menu__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  transition: left 10s;
+}
+
+/* Lines inside the hamburger button */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 26px;
+  height: 2px;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+/* Menu container */
+.menu__box {
+  display: flex;
+  position: fixed;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0 0;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+  background-color: #2F2F2F;
+  box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
+}
+
+
+/* Menu items */
+.menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 12px 10px;
+  color: #CBCBCB;
+  font-size: 35px;
+  font-weight: 800;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+}
+
+/* Lines effect on hover */
+.menu__item::before,
+.menu__item::after {
+  content: '';
+  position: absolute;
+  bottom: 50%;
+  height: 4px;
+  background-color: #CBCBCB;
+  width: 0;
+  transition: width 0.5s;
+}
+
+.menu__item::before {
+  right: 100%;
+}
+
+.menu__item::after {
+  left: 100%;
+}
+
+.menu__item:hover::before,
+.menu__item:hover::after {
+  width: 50%;
+}
+
+/* Hamburger menu state changes */
+#menu__toggle:checked ~ .menu__btn {
+  left: calc(100% - 46px);
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .40s;
+  background-color: #CBCBCB;
+}
+.menu__box {
+  transition-duration: .40s;
+}
+.menu__item {
+  transition-duration: .40s;
+}
+
+.menu__btn {
+  transition-duration: .40s;
+}
+
+/* Hover effects for the hamburger button */
+.menu__btn:hover > span::before {
+  transform: translateY(-3px);
+}
+
+.menu__btn:hover > span::after {
+  transform: translateY(3px);
+}
+
+.butterfly-for-menu {
+  height: 25%;
+  width: auto;
+  filter: brightness(5.2);
+  animation-delay: 3s;
+}
