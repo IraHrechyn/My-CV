@@ -1,0 +1,64 @@
+.header {
+  display: flex;
+  padding: 40px 45px ;
+  align-items: center;
+  background: #545454;
+}
+
+.logo {
+  margin-right: 16px ;
+  width: 50px;
+  height: 50px;
+}
+
+.name {
+  font-size: 35px;
+  color: #bebebe;
+}
+
+.search-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #bebebe;
+}
+
+.searchByYear {
+  border-radius:5px;
+}
+
+.searchByYear::placeholder{
+  color:#bebebe;
+}
+
+.searchByName {
+  border-radius:5px;
+}
+
+.searchByName::placeholder{
+  color:#bebebe;
+}
+
+
+.search {
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin: 6px;
+  padding: 15px;
+  background-color: #494949;
+  color: #bebebe;
+  outline: none;
+  font-size: 14px;
+}
+
+.find {
+  display: flex;
+  border-radius:10px;
+}
+
+.find:hover {
+  background: #cccccc;
+}

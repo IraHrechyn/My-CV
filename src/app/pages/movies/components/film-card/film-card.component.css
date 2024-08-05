@@ -1,0 +1,66 @@
+.film-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s, transform 0.3s; /* Додано трансформацію для ефекту збільшення */
+}
+
+.film-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.film-card img {
+  border-radius: 5px;
+  transition: transform 0.3s; /* Додано трансформацію для збільшення фото */
+}
+
+.film-card:hover {
+  box-shadow: 1px 1px 25px rgba(21, 20, 20, 0.72);
+  transform: scale(1.05); /* Додає ефект збільшення всієї картки */
+}
+
+.film-card:hover .film-data {
+  opacity: 0; /* Зникає інформація про фільм при наведенні */
+  transition: opacity 0.3s; /* Додає плавність при зникненні */
+}
+
+.film-data {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s; /* Додає плавність при появі */
+}
+
+.film-data_rating {
+  width: 53px;
+  height: 53px;
+  border: 5px rgb(241, 169, 69) solid;
+  border-radius: 34px;
+  color: #bebebe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.film-data_name {
+  color: #bebebe;
+  font-size: 24px;
+  text-align: center;
+  margin: 0 auto; /* Відступ для забезпечення, що текст не перекриває рейтинг */
+  flex-wrap: wrap; /* Забезпечує, що текст не буде переноситися на новий рядок */
+  overflow: hidden; /* Ховає текст, що не вміщується */
+  text-overflow: ellipsis; /* Додає три крапки, якщо текст не вміщується */
+}

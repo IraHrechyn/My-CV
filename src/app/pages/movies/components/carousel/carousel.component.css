@@ -1,0 +1,75 @@
+.film-carousel {
+  height: 65%;
+  width: 87%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  cursor: pointer;
+  margin:   10px auto;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.title-section{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 24px;
+  color: #bebebe;
+}
+.img-pop{
+  height: 50px;
+  width: auto;
+}
+
+.carousel-content {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  gap: 20px;
+  height: 85%;
+}
+
+.movie-item {
+  position: relative;
+  height: 100%;
+}
+
+.film-title {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  color: #bebebe;
+  text-align: center;
+  margin-top: -17px;
+  font-size: 13px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.movie-item:hover .film-image {
+  transform: scale(1.05);
+}
+
+.film-image {
+  height: 80%;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s;
+}
+
+.line{
+  width: 70%;
+  height: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px auto;
+  background: #d3b403;
+}
+
