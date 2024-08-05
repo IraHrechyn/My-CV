@@ -2,6 +2,16 @@
   <p class="title" [ngClass]="{'animate-lines': animateLines}">CLOCKS</p>
 </div>
 <div class="clocks">
-  <app-analog-clock></app-analog-clock>
-  <app-digital-clock></app-digital-clock>
+  <div class="clock-container">
+    <app-analog-clock></app-analog-clock>
+    <div class="clock-label-container">
+      <p class="clock-label">Analog Clock</p>
+    </div>
+  </div>
+  <div class="clock-container">
+    <app-digital-clock></app-digital-clock>
+    <div class="clock-label-container">
+      <p class="clock-label">Digital Clock</p>
+    </div>
+  </div>
 </div>

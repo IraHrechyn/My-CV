@@ -24,7 +24,6 @@ export class ClocksComponent implements OnInit{
     this.dateService.startClock();
     setTimeout(() => {
       this.animateLines = true;
-      console.log('Animation class added:', this.animateLines);
     }, 100);
   }
 }

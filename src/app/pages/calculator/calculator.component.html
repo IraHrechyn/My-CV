@@ -1,1 +1,34 @@
-<p>calculator works!</p>
+<div class="title-container">
+  <p class="title" [ngClass]="{'animate-lines': animateLines}">CALCULATOR</p>
+</div>
+
+<div class="calculator-container">
+  <!-- <app-app-navbar></app-app-navbar> -->
+  <div class="calc">
+    <app-display></app-display>
+    <div class="button">
+      <ng-container *ngFor="let button of state.buttons.correctOrder" class="button">
+        <app-button-action *ngIf="button | buttonOfType: ButtonTypeEnum.action" [label]="button"
+                           class="btn bg-grey"></app-button-action>
+        <app-button-numeric *ngIf="button | buttonOfType: ButtonTypeEnum.numeric" [class.zero]="button === '0'" [label]="button"
+                            class="btn"></app-button-numeric>
+        <app-button-operation *ngIf="button | buttonOfType: ButtonTypeEnum.operation" [label]="button"
+                              class="btn bg-orange "></app-button-operation>
+      </ng-container>
+    </div>
+  </div>
+  <div class="description">
+    <div class=" description-text">
+      <p >The calculator performs the following functions:</p>
+      <ul class="features-list ">
+        <li>Basic arithmetic operations: addition, subtraction, multiplication, and division.</li>
+        <li>Handles errors, such as division by zero.</li>
+        <li>Includes a clear button to reset the current calculation.</li>
+        <li>Supports decimal numbers for more precise calculations.</li>
+        <li>Uses flex layout to place the buttons for an organized and responsive design.</li>
+        <li>Structured code for ease of maintenance and updates.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>

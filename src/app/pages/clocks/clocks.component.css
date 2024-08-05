@@ -41,47 +41,101 @@
 .clocks {
   display: flex;
   width: 100%;
-  height: 85vh;
+  height: 50vh;
   justify-content: center;
   align-items: center;
   background: #FFFFFF;
+  margin-top: 30px;
 }
 
-.clocks app-analog-clock,
-.clocks app-digital-clock {
-  width: 50%;
-  height: 70%;
-  margin: 10px;
+.clock-container {
+  position: relative;
+  width: 48%;
+  height: 130%;
+  margin: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; /* Додаємо, щоб мати можливість позиціонувати псевдоелементи */
+  z-index: 1;
+  padding: 10px;
 }
 
-.clocks app-analog-clock::after,
-.clocks app-digital-clock::after,
-.clocks app-analog-clock::before,
-.clocks app-digital-clock::before{
+.clock-container::before {
   content: '';
   position: absolute;
-  bottom: 0; /* Розміщення на нижній частині */
+  top: 0;
   left: 0;
-  width: 70%;
-  height: 20px; /* Висота області для зображення */
-  justify-content: center;
-  background-image: url('../../../assets/butterfly.png'); /* Шлях до вашого зображення метелика */
-  background-repeat: repeat-x; /* Повторює зображення по горизонталі */
-  background-size: contain; /* Адаптує розмір зображення до висоти */
+  width: 100%;
+  height: 100%;
+  background: url('/assets/butterfly.png') repeat;
+  background-size: 20px 20px;
+  opacity: 0.32; /* Встановлення прозорості */
+  z-index: -1; /* Відправлення фону за вміст контейнера */
 }
 
+app-analog-clock,
+app-digital-clock {
+  width: 95%;
+  height: 96%;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  background: #FFFFFF;
+}
 
-@media (max-width: 768px) {
+.clock-label-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 35%;
+  height: 40px;
+  z-index: 2;
+  background: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.clock-label {
+  font-size: 18px;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
   .clocks {
+    width: 100%;
+    display: flex;
     flex-direction: column;
+    height: auto;
+    overflow: hidden; /* Прибрати горизонтальний скролінг */
   }
 
-  .clocks app-analog-clock,
-  .clocks app-digital-clock {
+  .clock-container {
     width: 100%;
+    margin: 10px auto;
+    position: relative;
+    height: auto;
+    min-height: 35vh;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .clock-label {
+    font-size: 14px;
+  }
+
+  .title.animate-lines::before,
+  .title.animate-lines::after {
+    width: 100px;
+  }
+
+
+}
+
+@media (max-width: 1280px) and (min-width: 801px){
+  .clock {
+    margin-top: 100px;
   }
 }
