@@ -33,3 +33,46 @@ html{
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+
+.snake {
+  background-color: transparent;
+  background-image: url("/assets/body_of_snake.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  height: 100%;
+  width: 100%;
+  transition: top 1s linear, left 1s linear;
+}
+
+.head {
+  background-color: transparent;
+  background-image: url("/assets/head_of_snakee.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  height: 100%;
+  width: 100%;
+  transition: top 1s linear, left 1s linear;
+}
+.food {
+  background-color: transparent;
+  background-image: url("/assets/food.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+}
+
+.obstacle {
+  background-color: transparent;
+  background-image: url("/assets/obstacle1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
