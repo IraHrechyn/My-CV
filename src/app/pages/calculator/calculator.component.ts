@@ -7,6 +7,7 @@ import {ButtonOperationComponent} from "./components/button-operation/button-ope
 import {ButtonNumericComponent} from "./components/button-numeric/button-numeric.component";
 import {ButtonOfTypePipe} from "./pipes/button-of-type.pipe";
 import {CommonModule} from "@angular/common";
+import {AppNavbarComponent} from "../home/components/app-navbar/app-navbar.component";
 
 
 @Component({
@@ -19,6 +20,7 @@ import {CommonModule} from "@angular/common";
     ButtonNumericComponent,
     ButtonOfTypePipe,
     CommonModule,
+    AppNavbarComponent,
   ],
   templateUrl: './calculator.component.html',
   styleUrl: './calculator.component.css'

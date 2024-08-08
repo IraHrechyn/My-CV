@@ -7,6 +7,7 @@ import {ModalComponent} from "./components/modal/modal.component";
 import {CommonModule} from "@angular/common";
 import {DataService} from "./services/data.service";
 import {ScrollTopModule} from "primeng/scrolltop";
+import {AppNavbarComponent} from "../home/components/app-navbar/app-navbar.component";
 
 @Component({
   selector: 'app-movies',
@@ -18,7 +19,8 @@ import {ScrollTopModule} from "primeng/scrolltop";
     CarouselComponent,
     PaginationComponent,
     ModalComponent,
-    ScrollTopModule
+    ScrollTopModule,
+    AppNavbarComponent
   ],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.css'

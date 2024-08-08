@@ -3,6 +3,7 @@ import {ClockService} from "./services/clock.service";
 import {DigitalClockComponent} from "./components/digital-clock/digital-clock.component";
 import {AnalogClockComponent} from "./components/analog-clock/analog-clock.component";
 import {NgClass} from "@angular/common";
+import {AppNavbarComponent} from "../home/components/app-navbar/app-navbar.component";
 
 @Component({
   selector: 'app-clocks',
@@ -10,7 +11,8 @@ import {NgClass} from "@angular/common";
   imports: [
     DigitalClockComponent,
     AnalogClockComponent,
-    NgClass
+    NgClass,
+    AppNavbarComponent
   ],
   templateUrl: './clocks.component.html',
   styleUrl: './clocks.component.css'

@@ -23,7 +23,7 @@ import {HeaderComponent} from "../header/header.component";
   templateUrl: './game-boarder.component.html',
   styleUrl: './game-boarder.component.css'
 })
-export class GameBoarderComponent implements OnInit, AfterViewInit, OnDestroy {
+export class GameBoarderComponent implements OnInit, AfterViewInit{
   constructor(
     private readonly renderer: Renderer2,
     public readonly m: GeneralModel,
@@ -49,10 +49,6 @@ export class GameBoarderComponent implements OnInit, AfterViewInit, OnDestroy {
     this.m.setGridSize();
     this.m.maxX = this.m.cellsInRow;
     this.m.maxY = this.m.cellsInColumn;
-  }
-
-  ngOnDestroy(): void {
-    this.m.timerSubscription.unsubscribe();
   }
 
   ngAfterViewInit(): void {
