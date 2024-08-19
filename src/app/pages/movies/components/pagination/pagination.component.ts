@@ -16,9 +16,7 @@ export class PaginationComponent implements OnInit {
   constructor(
     public state: DataService,
     private apiService: AppApiService
-  ) {
-    this.pagination = this.state.pagination;
-  }
+  ) { this.pagination = this.state.pagination; }
 
   async ngOnInit() {
     await this.fetchMoviesAndUpdate();

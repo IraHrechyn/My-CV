@@ -9,9 +9,10 @@
   <div *ngIf="m.gameOver" class="game-over"><h1>Game Over</h1></div>
 
   <div class="game-board" [ngClass]="{'blur': m.isPaused || m.gameOver}"></div>
-  <app-mobile-controls></app-mobile-controls>
 
+  <app-mobile-controls></app-mobile-controls>
 </div>
+
 <app-start-modal *ngIf="m.modalVisible"></app-start-modal>
 
 

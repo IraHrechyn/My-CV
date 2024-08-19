@@ -12,8 +12,7 @@ import {AppConstants} from "../../types/constants";
 export class HeaderComponent implements OnInit {
   showInstructions: boolean = false;
 
-  constructor(readonly m: GeneralModel) {
-  }
+  constructor(readonly m: GeneralModel) {}
 
   sound(): void {
     const soundButton = document.querySelector('.sound');
@@ -32,23 +31,20 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     const savedBestResult = localStorage.getItem(AppConstants.localStorageRecordKey);
-    console.log(savedBestResult);
 
     if (savedBestResult !== null) {
       const {bestScore, bestTimeInt, bestTime} = JSON.parse(savedBestResult);
-      console.log(bestScore)
 
       if(bestScore===undefined || bestTimeInt===undefined || bestTime===undefined){
-        this.m.bestScore =0;
+        this.m.bestScore = 0;
         this.m.bestTimeInt = 0;
         this.m.bestTime = "00:00";
       }
-else {
+
+      else {
         this.m.bestScore = bestScore;
         this.m.bestTimeInt = bestTimeInt;
         this.m.bestTime = bestTime;
-        console.log('Best Score:', this.m.bestScore);
-        console.log('Best Time:', this.m.bestTime);
       }
     }
   }

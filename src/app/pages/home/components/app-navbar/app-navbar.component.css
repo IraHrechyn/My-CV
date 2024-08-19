@@ -4,14 +4,14 @@
   background-color: #333;
   color: #fff;
   position: fixed;
-  left: -60px; /* Зміщення панелі за межі екрана */
+  left: -60px;
   top: 0;
   transition: left 0.3s ease;
   z-index: 1000;
 }
 
 .panel.visible {
-  left: 0; /* Панель показується на екрані */
+  left: 0;
 }
 
 .btn-panel {
@@ -22,7 +22,7 @@
   font-size: 20px;
   cursor: pointer;
   position: absolute;
-  right: -20px; /* Винести кнопку трохи за межі панелі */
+  right: -20px;
   top: 20px;
   width: 20px;
   height: 60px;
@@ -65,18 +65,4 @@
   border: 2px solid #fff;
   border-radius: 10px;
   padding: 4px;
-}
-
-@media (max-width: 768px) {
-  .panel {
-    width: 50px;
-  }
-
-  .panel.visible {
-    left: -50px;
-  }
-
-  .projectImg, .proImg {
-    width: 20px;
-  }
 }

@@ -21,7 +21,7 @@
   max-width: 1024px;
   display: grid;
   align-self: center;
-  background-image: url("/assets/board1.png");
+  background-image: url("/assets/board.png");
   background-position: center;
   flex-grow: 1;
 }
@@ -51,27 +51,8 @@
   }
 }
 
-@media (max-width: 890px )and (min-width: 768px) {
+@media (max-width: 890px ) {
   .container {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
-
-@media (max-width: 767px )and (min-width: 640px) {
-  .container {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 639px )and (min-width: 480px) {
-  .container {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 479px ){
-  .container {
-    font-size: 18px;
-  }
-}
-

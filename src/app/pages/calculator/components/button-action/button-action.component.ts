@@ -14,7 +14,6 @@ export class ButtonActionComponent {
   @Input() label!: string;
   constructor(private state: DataService, private calculateService: CalculateService ) {}
 
-
   handleButtonClick() {
     switch (this.label) {
       case  ActionsEnum.Equal:

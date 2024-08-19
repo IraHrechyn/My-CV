@@ -9,7 +9,6 @@ import {ButtonOfTypePipe} from "./pipes/button-of-type.pipe";
 import {CommonModule} from "@angular/common";
 import {AppNavbarComponent} from "../home/components/app-navbar/app-navbar.component";
 
-
 @Component({
   selector: 'app-calculator',
   standalone: true,

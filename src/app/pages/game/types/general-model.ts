@@ -28,7 +28,7 @@ export class GeneralModel {
   private _headTurn: number = 0;
 
   private _foodPosition: Position = { x: 5, y: 5 };
-  private _snakeBody: Position[] = [{ x: 13, y: 6 }];
+  private _snakeBody: Position[] = [{ x: 12, y: 6 },{ x: 13, y: 6 }];
 
   private _obstacles: Position[] = [];
 

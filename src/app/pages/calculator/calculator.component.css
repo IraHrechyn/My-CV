@@ -152,6 +152,13 @@ body, html {
     justify-content: center;
     align-items: center;
     height: auto;
+    width: 100vw;
+
+  }
+
+  .calc, .description {
+    margin: 0 auto;
+    left: 0;
   }
 
   .description {
@@ -173,3 +180,4 @@ body, html {
     width: 50px;
   }
 }
+

@@ -1,33 +1,40 @@
 <div class="container">
   <div class="feedback-container">
-    <form class="form-container">
+    <form
+      class="form-container"
+      action="https://formspree.io/f/mdknzpwg"
+      method="POST"
+      id="contact-form"
+      name="simple-contact-form" accept-charset="utf-8"
+      (submit)="submitForm($event)"
+    >
       <div class="group">
-        <!-- Name input field -->
+
         <div class="form-group name">
-          <input type="text" name="name" placeholder="Enter your name..." required>
+          <input type="text" name="name"  placeholder="Enter your name..." required>
         </div>
 
-        <!-- Thank you message -->
         <div class="my-message">
           <p>Thank you for viewing <br> my portfolio.</p>
           <p class="second">You can send me your questions<br> or everything you want.</p>
         </div>
 
-        <!-- Email input field -->
         <div class="form-group email">
-          <input type="email" name="email" placeholder="Enter your email..." required>
+          <input type="email" name="email"  placeholder="Enter your email..." required>
         </div>
 
-        <!-- Message textarea -->
         <div class="form-group textarea">
-          <textarea name="message" placeholder="Enter your message..." required></textarea>
+          <textarea name="message"  rows="5" placeholder="Enter your message..." required></textarea>
         </div>
       </div>
 
-      <!-- Submit button -->
       <div class="send-button">
         <button type="submit">Send</button>
       </div>
     </form>
+  </div>
+
+  <div id="form-status" class="status" >
+    <p id="status-message"></p>
   </div>
 </div>

@@ -11,7 +11,6 @@ export class DigitalClockComponent {
 
   constructor(public dateService: ClockService) {}
 
-
   public formatTime(time: number): string {
     return time < 10 ? '0' + time : time.toString();
   }

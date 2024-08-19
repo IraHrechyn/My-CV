@@ -33,4 +33,34 @@ export class ContactComponent implements AfterViewInit {
     const formContainer = this.el.nativeElement.querySelector('.form-container');
     observer.observe(formContainer);
   }
+
+  async submitForm(event: Event) {
+    event.preventDefault(); // Зупиняємо стандартну відправку форми
+
+    const form = event.target as HTMLFormElement;
+    const statusMessage = this.el.nativeElement.querySelector('#status-message');
+    const formStatus = this.el.nativeElement.querySelector('#form-status');
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        statusMessage.textContent = "Thank you! Your message has been sent.";
+        form.reset(); // Очищення форми
+      } else {
+        statusMessage.textContent = "Oops! There was a problem submitting your form.";
+      }
+    } catch (error) {
+      statusMessage.textContent = "Oops! There was a problem submitting your form.";
+    }
+
+    // Показуємо статус після відправки
+    formStatus.style.display = "block";
+  }
 }

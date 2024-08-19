@@ -54,7 +54,7 @@
 }
 
 .title::before {
-  right: calc(100% + 10px); /* Вирівнювання до заголовка */
+  right: calc(100% + 10px);
 }
 
 .title::after {
@@ -343,7 +343,6 @@ margin-right: 20px;
   }
 }
 
-
 @media (min-width: 640px) and (max-width: 1199px) {
   .projects-container {
     height: 80vh;
@@ -363,7 +362,7 @@ margin-right: 20px;
   }
 
   .img-project {
-    width: 80%; /* Зміна */
+    width: 80%;
     height: auto;
     margin-left: 10%;
   }

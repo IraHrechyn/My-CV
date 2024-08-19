@@ -8,7 +8,6 @@ import {Component, ElementRef, AfterViewInit, HostListener, Renderer2} from '@an
   styleUrls: ['./about-me.component.css',  './../../styles/button-style.css']
 })
 export class AboutMeComponent implements AfterViewInit {
-
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngAfterViewInit() {
@@ -37,4 +36,12 @@ export class AboutMeComponent implements AfterViewInit {
     observer.observe(responseSection);
     observer.observe(skillsSection);
   }
+
+  downloadCV() {
+    const link = document.createElement('a');
+    link.href = 'assets/cv.pdf';
+    link.download = 'Hrechyn_CV.pdf';
+    link.click();
+  }
+
 }

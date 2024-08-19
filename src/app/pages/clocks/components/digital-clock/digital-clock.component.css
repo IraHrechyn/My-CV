@@ -6,7 +6,7 @@
   height: 50%;
   margin: 0 auto;
   position: relative;
-  background: #2f2f2f; /* Сірий фон */
+  background: #2f2f2f;
   background-size: cover;
   font-family: "Josefin Slab", serif;
   top: 50%;
@@ -22,99 +22,17 @@
   position: absolute;
   justify-content: center;
   align-items: center;
-  color: #FFFFFF; /* Сірий колір тексту */
+  color: #FFFFFF;
   border: 5px solid #FFFFFF;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 913px) {
   .time{
     font-size: 30px;
   }
   .clock2{
-    width: 98%;
+    width: 96%;
     height: 270px;
+    margin-top:210px;
   }
 }
-
-
-
-
-
-
-/*.block1 {*/
-/*  top: 20px;*/
-/*  width: 34%;*/
-/*  height: 45%;*/
-/*  left: -120px;*/
-/*  z-index: 10;*/
-/*  opacity: 70%;*/
-/*  display: flex;*/
-/*  position: absolute;*/
-/*  background: #999999;*/
-/*  animation: changeColor1 10s infinite;*/
-/*}*/
-
-/*@keyframes changeColor1 {*/
-/*  0%, 50%, 100% {*/
-/*    background: #999999;*/
-/*  }*/
-/*  25%, 75% {*/
-/*    background:  #CCCCCC;*/
-/*  }*/
-/*}*/
-
-/*.block2 {*/
-/*  width: 15%;*/
-/*  bottom: -30px;*/
-/*  height: 24%;*/
-/*  right: -20px;*/
-/*  opacity: 50%;*/
-/*  display: flex;*/
-/*  position: absolute;*/
-/*  background:  #CCCCCC;*/
-/*  animation: changeColor2 6s infinite;*/
-/*}*/
-
-/*@keyframes changeColor2 {*/
-/*  0%, 50%, 100% {*/
-/*    background:  #CCCCCC;*/
-/*  }*/
-/*  25%, 75% {*/
-/*    background: #999999;*/
-/*  }*/
-/*}*/
-
-/*.block3 {*/
-/*  width: 28%;*/
-/*  top: -55px;*/
-/*  height: 42%;*/
-/*  left: -45px;*/
-/*  opacity: 70%;*/
-/*  display: flex;*/
-/*  position: absolute;*/
-/*  background:  #CCCCCC;*/
-/*  animation: changeColor2 6s infinite;*/
-/*}*/
-
-/*.block4 {*/
-/*  width: 20%;*/
-/*  top: -30px;*/
-/*  height: 30%;*/
-/*  opacity: 70%;*/
-/*  right: -25px;*/
-/*  display: flex;*/
-/*  position: absolute;*/
-/*  background: #999999;*/
-/*  animation: changeColor1 8s infinite;*/
-/*}*/
-
-/*.clock-name {*/
-/*  display: flex;*/
-/*  position: absolute;*/
-/*  justify-content: center;*/
-/*  text-align: center;*/
-/*  bottom: -40px;*/
-/*  width: 100%;*/
-/*  color: #000;*/
-/*  font-size: 1.5em;*/
-/*}*/

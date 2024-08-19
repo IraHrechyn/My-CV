@@ -1,15 +1,12 @@
 <div id="projects" class="projects-container">
 
-  <!-- Title Section -->
   <div class="title">
     <p class="text">PROJECTS</p>
   </div>
 
-  <!-- Carousel Container -->
   <div class="carousel-container">
     <div class="carousel">
 
-      <!-- Project Items -->
       <div
         class="project"
         *ngFor="let project of projects; let i = index"
@@ -21,7 +18,6 @@
 
         <div class="project-content">
 
-          <!-- Project Image Group -->
           <div class="image-group">
             <div class="group">
               <img class="img-frame" src="assets/frame.png" alt="frame">
@@ -33,7 +29,6 @@
             </div>
           </div>
 
-          <!-- Project Info -->
           <div class="project-info">
             <div class="title-section">
               <img class="wing" src="assets/butterfly-path.png" alt="wing">
@@ -49,7 +44,6 @@
     </div>
   </div>
 
-  <!-- Navigation Container -->
   <div class="navigation-container">
     <button class="carousel-button prev" (click)="prev()">&#10094;</button>
     <div class="project-indicator">

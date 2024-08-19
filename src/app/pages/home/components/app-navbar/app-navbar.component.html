@@ -1,6 +1,6 @@
 <div class="panel" [ngClass]="{'visible': isPanelVisible}">
+  <button class="btn-panel" (click)="togglePanel()"> {{ isPanelVisible ? '&#10094;' : '&#10095;' }}</button>
 
-    <button class="btn-panel" (click)="togglePanel()"> {{ isPanelVisible ? '&#10094;' : '&#10095;' }}</button>
   <div class="projects">
     <a routerLinkActive="active-link" routerLink="/home"><img class="projectImg"  src="../../../../../assets/home.png" alt=""></a>
     <a routerLinkActive="active-link" routerLink="/clock"><img class="projectImg" src="../../../../../assets/time.png" alt=""></a>

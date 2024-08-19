@@ -8,7 +8,6 @@ import {CardData} from "../types/card-data.interface";
   providedIn: 'root'
 })
 export class AppApiService {
-
   private apiUrl = 'https://api.themoviedb.org/3/discover/movie';
   private carouselApiUrl = 'https://api.themoviedb.org/3/movie/now_playing';
 

@@ -25,7 +25,6 @@ export class CarouselComponent implements OnInit {
 
   async ngOnInit() {
     this.carouselMovies = await this.getCarouselData();
-
   }
 
   async getCarouselData(): Promise<CarouselData[]> {

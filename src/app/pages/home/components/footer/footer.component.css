@@ -1,4 +1,3 @@
-/* Basic Styles */
 *,
 *::before,
 *::after {
@@ -7,7 +6,6 @@
   padding: 0;
 }
 
-/* Container Styling */
 .container {
   display: flex;
   justify-content: space-between;
@@ -19,7 +17,6 @@
   margin-top: -1px;
 }
 
-/* Logo Styling */
 .logo {
   display: flex;
   justify-content: center;
@@ -34,7 +31,6 @@
   padding: 30px;
 }
 
-/* Contacts Styling */
 .contacts {
   display: flex;
   justify-content: center;
@@ -53,7 +49,6 @@
   margin: 5px;
 }
 
-/* Tablet Adaptation */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -73,7 +68,6 @@
   }
 }
 
-/* Mobile Adaptation */
 @media (max-width: 480px) {
   .container {
     height: 25vh;

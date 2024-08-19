@@ -20,18 +20,18 @@
   max-width: 60%;
   max-height: 58%;
   text-align: center;
-  position: relative; /* Додаємо position: relative */
+  position: relative;
 }
 
 .close-button {
   cursor: pointer;
-  position: absolute; /* Використовуємо position: absolute */
+  position: absolute;
   top: 8px;
   right: 8px;
   width: 25px;
   font-size: 24px;
   color: #b9b9b9;
-  z-index: 1; /* Забезпечуємо, що кнопка буде над усіма елементами */
+  z-index: 1;
 }
 
 .modal-image {
@@ -45,7 +45,7 @@
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
-  position: relative; /* Забезпечуємо, що елементи будуть у відносному положенні */
+  position: relative;
 }
 
 .modal-title {
@@ -85,7 +85,6 @@ hr {
   background-color: #f1a945;
   height: 2px;
   margin: 10px 10px 10px 0;
-
 }
 
 .star-rating {

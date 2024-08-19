@@ -7,7 +7,6 @@
   align-items: center;
   flex-wrap: wrap;
   background: #FFEFD5;
-
 }
 
 .score-board {
@@ -16,7 +15,6 @@
   align-items: center;
   flex-direction: column;
   font-size:20px;
-
   padding: 0;
 }
 
@@ -42,6 +40,7 @@
   background-size: cover;
   cursor: pointer;
 }
+
 .sound.sound-on {
   background-image: url("/assets/sound_on.png");
 }
@@ -49,6 +48,7 @@
 .sound.sound-off {
   background-image: url("/assets/sound_off.png");
 }
+
 .instruction-window {
   display: none;
 }
@@ -78,26 +78,50 @@
   border-radius:  34px;
 }
 
-
 @media (max-width: 768px) {
   .score-card {
     padding: 5px;
   }
-
-  .score-board {
-    font-size: 55%;
-  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 566px) {
   .score-card {
     padding: 5px;
-    font-size: 85%;
-    align-items: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
-  .sound {
-    margin-left: 3px;
+  .score-board {
+    flex-basis: 23%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
 
+  .score-board:nth-child(2) { /* Best Score */
+    order: 1;
+  }
+
+  .score-board:nth-child(3) { /* Score */
+    order: 2;
+  }
+
+  .score-board:nth-child(4) { /* Level */
+    order: 3;
+  }
+
+  .score-board:nth-child(5) { /* Time */
+    order: 4;
+  }
+
+  .score-board:nth-child(1),
+  .score-board:nth-child(7),
+  .score-board:nth-child(6) {
+    order: 5;
+    flex-basis: 33.33%;
+  }
+
+  .score-board:nth-child(1) .sound {
+    margin: 0 10px;
+    width: 70px;
   }
 }

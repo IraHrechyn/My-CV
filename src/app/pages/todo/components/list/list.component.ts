@@ -6,7 +6,6 @@ import {TableModule} from "primeng/table";
 import {FormsModule} from "@angular/forms";
 import {InputTextareaModule} from "primeng/inputtextarea";
 import {InputTextModule} from "primeng/inputtext";
-import {PaginatorModule} from "primeng/paginator";
 import {TagModule} from "primeng/tag";
 import {ButtonDirective} from "primeng/button";
 import {Ripple} from "primeng/ripple";

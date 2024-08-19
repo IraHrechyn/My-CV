@@ -12,9 +12,7 @@ import {FilmCardComponent} from "../film-card/film-card.component";
   styleUrl: './movie-list.component.css'
 })
 export class MovieListComponent  implements OnInit{
-
-  constructor(public state: DataService, private apiService: AppApiService){
-  }
+  constructor(public state: DataService, private apiService: AppApiService){}
 
   async ngOnInit() {
     await this.loadMoviesData();

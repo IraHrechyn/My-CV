@@ -13,9 +13,8 @@
   width: 130px;
   height: 130px;
   overflow: hidden;
-  /*background: #bb9f77;*/
   padding: 10px 10px;
-  border-radius:90px;
+  border-radius:34px;
   opacity: 0.5;
 }
 
@@ -34,6 +33,22 @@
   box-shadow: 0 4px 24px var(hsl(40, 48%, 12%));
 }
 
+.left{
+  padding: 10px 10px 5px 5px;
+}
+
+.right{
+  padding: 10px 5px 5px 10px;
+}
+
+.up{
+  padding-bottom:5px;
+}
+
+.down{
+  padding-top:5px;
+}
+
 .two-buttons {
   display: flex;
   justify-content: space-between;
@@ -44,7 +59,7 @@
   .mobile-controls {
     flex: 1;
     display: flex;
-    margin-top: -130px;
+    margin-top: -180px;
     justify-content: flex-end;
     align-items: center;
     width: 100%;

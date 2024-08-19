@@ -24,14 +24,12 @@ export class ProjectsComponent implements AfterViewInit {
   ) {}
 
   ngAfterViewInit() {
-    // Options for the IntersectionObserver
     const observerOptions = {
       root: null,
       rootMargin: '0px',
       threshold: 0.1
     };
 
-    // Callback function for the IntersectionObserver
     const onSectionVisible = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -41,22 +39,18 @@ export class ProjectsComponent implements AfterViewInit {
       });
     };
 
-    // Create an IntersectionObserver instance
     const observer = new IntersectionObserver(onSectionVisible, observerOptions);
 
-    // Select the first project and add the 'first' class
     this.firstProject = this.el.nativeElement.querySelector('.project');
     if (this.firstProject) {
       this.renderer.addClass(this.firstProject, 'first');
     }
 
-    // Observe the projects container for intersection changes
     const projectsContainer = this.el.nativeElement.querySelector('.projects-container');
     if (projectsContainer) {
       observer.observe(projectsContainer);
     }
 
-    // Animate the first project after a short delay
     setTimeout(() => {
       if (this.firstProject) {
         setTimeout(() => {
@@ -67,7 +61,6 @@ export class ProjectsComponent implements AfterViewInit {
     }, 100);
   }
 
-  // Move to the next project
   next() {
     this.prevIndex = this.currentIndex;
     this.currentIndex = (this.currentIndex + 1) % this.projects.length;
@@ -75,7 +68,6 @@ export class ProjectsComponent implements AfterViewInit {
     this.updateVisibleProjects();
   }
 
-  // Move to the previous project
   prev() {
     this.prevIndex = this.currentIndex;
     this.currentIndex = (this.currentIndex - 1 + this.projects.length) % this.projects.length;
@@ -83,7 +75,6 @@ export class ProjectsComponent implements AfterViewInit {
     this.updateVisibleProjects();
   }
 
-  // Update the visibility of projects based on the direction
   updateVisibleProjects() {
     const prevProject = this.el.nativeElement.querySelectorAll('.project')[this.prevIndex];
     const currentProject = this.el.nativeElement.querySelectorAll('.project')[this.currentIndex];
@@ -101,7 +92,6 @@ export class ProjectsComponent implements AfterViewInit {
         this.renderer.addClass(prevProject, 'exit-right1');
       }
 
-      // Remove animation classes and update 'active' class after animation duration
       setTimeout(() => {
         this.renderer.removeClass(prevProject, 'exit-left');
         this.renderer.removeClass(prevProject, 'exit-right1');
@@ -109,11 +99,10 @@ export class ProjectsComponent implements AfterViewInit {
         this.renderer.removeClass(currentProject, 'enter-right');
         this.renderer.removeClass(prevProject, 'active');
         this.renderer.addClass(currentProject, 'active');
-      }, 1000); // Ensure this matches your CSS animation duration
+      }, 1000);
     }
   }
 
-  // Handle scroll events to add/remove animation class
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const section = document.getElementById('projects');

@@ -63,6 +63,7 @@
 .title.animate-lines::after {
   width: 150px;
 }
+
 .about-me-container {
   display: flex;
   flex-direction: column;
@@ -72,7 +73,6 @@
   opacity: 0;
   transform: translateX(-100%);
   transition: transform 1.5s ease, opacity 1.5s ease;
-
 }
 
 .about-me-container.visible {
@@ -324,7 +324,6 @@ button {
     width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
-
   }
 
   .content-column,

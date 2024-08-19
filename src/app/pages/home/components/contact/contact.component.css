@@ -7,7 +7,6 @@
   }
 }
 
-/* Container styles */
 .container {
   display: flex;
   position: relative;
@@ -18,7 +17,6 @@
   margin-top: -2px;
 }
 
-/* Feedback container styles */
 .feedback-container {
   width: 100%;
   display: flex;
@@ -29,7 +27,6 @@
   height: 80vh;
 }
 
-/* Form container styles */
 .form-container {
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
@@ -39,12 +36,10 @@
   opacity: 1;
 }
 
-/* Form group styles */
 .form-group {
   width: 100%;
 }
 
-/* Group grid styles */
 .group {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -53,7 +48,6 @@
   grid-row-gap: 10px;
 }
 
-/* Input and textarea styles */
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -69,7 +63,6 @@
   grid-column: span 2;
 }
 
-/* Message styles */
 .my-message {
   border: 1px solid #CBCBCB;
   color: #CBCBCB;
@@ -83,7 +76,6 @@
   flex-direction: column;
 }
 
-/* Name and email input styles */
 .name,
 .email {
   grid-column: 1;
@@ -94,13 +86,11 @@
   height: 50px;
 }
 
-/* Textarea styles */
 .form-group.textarea textarea {
   height: 130px;
   resize: none;
 }
 
-/* Send button styles */
 .send-button {
   margin: 15px;
   display: flex;
@@ -108,12 +98,17 @@
   align-items: center;
 }
 
-/* Second paragraph margin adjustment */
 .second {
   margin-top: -5px;
 }
 
-/* Responsive styles for screens <= 768px */
+.status{
+  display:none;
+  text-align: center;
+  color: #CBCBCB;
+  background: #2f2f2f;
+}
+
 @media (max-width: 768px) {
   .group {
     grid-template-columns: 1fr;
@@ -137,7 +132,6 @@
   }
 }
 
-/* Responsive styles for screens <= 480px */
 @media (max-width: 480px) {
   .container {
     height: 65vh;
